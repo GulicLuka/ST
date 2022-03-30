@@ -1,4 +1,14 @@
 <?php 
+require_once("UserDB.php");
+
+#var_dump($_POST);   debugging
+#exit();
+
+$name = $_POST["first"];
+$surname = $_POST["last"];
+
+UserDB::save_to_db($name, $surname);
+
 /* TODO
 
 1. Import the UserDB.php file.

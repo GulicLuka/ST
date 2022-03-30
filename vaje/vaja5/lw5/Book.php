@@ -4,6 +4,7 @@ class Book {
     public $title = null;
     public $author = null;
     public $id = 0;
+    public $price = null;
 
     /**
      * Constructor: creates a new instance.
@@ -11,10 +12,11 @@ class Book {
      * @param type $title
      * @param type $author
      */
-    public function __construct($id, $title, $author) {
+    public function __construct($id, $title, $author, $price) {
         $this->id = $id;
         $this->title = $title;
         $this->author = $author;
+        $this->price = $price;
     }
 
     /**
@@ -22,7 +24,7 @@ class Book {
      * @return type String
      */
     public function __toString() {
-        return sprintf("Book{%d, %s, %s}", $this->id, $this->author, $this->title);
+        return sprintf("Book{%d, %s, %s, %s}", $this->id, $this->author, $this->title, $this->price);
     }
 
 }

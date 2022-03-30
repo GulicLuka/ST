@@ -7,15 +7,19 @@
 
 // Complete function isPrime($number) by implementing a simple algorithm
 function isPrime($number) {
-    # TODO
-    return false;
+    for ($i=2; $i <= $number / 2 ; $i++) { 
+        if($number % $i == 0){
+            return false;
+        }
+    }
+    return true;
 }
 
 $number = $_GET["number"];
 
 ?>
 
-<h1>Checking if <?=$number?> is prime</h1>
+<h1>Checking if <?= $number ?> is prime</h1>
 
 <p><?php
 
