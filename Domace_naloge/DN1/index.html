@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Domaca naloga 1</title>
 </head>
 <body>
-    
+    <nav>
+        <div>
+            <h1>IMENIK</h1>
+            <a href="index.html" >Domov</a>
+        </div>
+        <a href="./pages/vizitka.html" id="vizitka">Vizitka</a>
+    </nav>
+    <div id="search_container">
+        <from>
+            <label>Poiščite osebo</label>
+            <div class="separator">
+                <div>
+                    <input type="text" />
+                    <input type="submit" value="išči"/>
+                </div>
+                <button id="addPersonBtn">+</button>
+            </div>
+        </from>
+    </div>
+    <div id="shade"></div>
+    <div id="add-new-person">
+        <form>
+            <h1>Ustvari novega uporabnika</h1>
+            <label for="ime">Ime</label>
+            <input id="ime" type="text" /> <!-- important -->
+            <label for="priimek">Priimek</label>
+            <input id="priimek" type="text" />
+            <label for="vzdevek">Vzdevek</label>
+            <input id="vzdevek" type="text" />
+            <label for="telst">Telefonska številka</label>
+            <input id="telst" type="tel" /> <!-- #important usaj ena mail ali pa tel.st.#    format stevilke -->
+            <label for="mail">E-pošta</label>
+            <input id="mail" type="email" /> <!-- #important usaj ena mail ali pa tel.st.#    format maila -->
+            <input id="dodaj" type="submit" value="Dodaj" />
+            <button id="cancel">X</button>
+        </form>
+    </div>
+    <div id="contacts-container">
+
+    </div>
+
+    <script src="./script/script.js"></script>
 </body>
 </html>

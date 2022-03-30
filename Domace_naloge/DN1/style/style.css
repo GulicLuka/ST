@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Helvetica', 'Arial', 'sans-serif';
+    color:#0e0f0f;
+}
+
+
+body{
+    background-color: #f2f5ff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    z-index: 0;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    background-color: #f2f5ff;
+    position: sticky;
+    font-style: bold;
+    font-weight: 700;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: #dadce6 solid 1px;
+}
+
+nav div {
+    display: flex;
+    flex-direction: row;
+    width:50%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.5em;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color:#0e0f0f;
+    transition: color 0.20s;
+    font-size: 1em;
+}
+
+a:hover{
+    color:#1a4ef8; /*153dc0*/
+}
+
+#vizitka {
+    color: #f2f5ff;
+    background-color: #4e4f53;
+    padding: 0.5em 1.5em;
+    border-radius: 2em;
+    transition: background-color 0.20s;
+}
+
+#vizitka:hover {
+    color: #f2f5ff;
+    background-color: #1a4ef8; /*1a4ef8*/
+}
+
+/* SEARCH */
+#search_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#search_container .separator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#search_container label {
+    display: block;
+    font-weight: 500;
+}
+
+#search_container input[type="text"] {
+    border: solid 1px #dbdee7;
+}
+
+#search_container input[type="text"]:focus {
+    outline: solid 1px #c9ccd4;
+}
+
+#search_container input[type="submit"] {
+    border: none;
+    color: #ffffff;
+    background-color: #1a4ef8;
+    transition: background-color 0.2s;
+}
+
+#search_container input[type="submit"]:hover {
+    background-color: #0b38cc;
+}
+
+#addPersonBtn {
+    border-radius: 100%;
+    border: none;
+    font-weight: 900;
+    background-color: #ff6739;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+#addPersonBtn:hover {
+    background-color: #fa5523;
+}
+
+/* OKNO ZA DODAJANJE */
+#add-new-person {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    background-color: #f2f5ff;
+}
+
+#add-new-person form h1 {
+    padding-bottom: 1.5em;
+}
+
+#add-new-person form label {
+    display: block;
+    font-weight: 500;
+}
+
+#add-new-person form input {
+    display: block;
+    margin-bottom: 1em;
+    border-radius: 0.3em;
+    border: none;
+    width:90%;
+    background-color: #fffbfb; 
+    outline: none !important
+}
+
+#add-new-person form input:focus {
+    outline: solid 2px #adbef3  !important
+}
+
+#add-new-person form input[type="submit"] {
+    display:inline-block;
+    width: auto;
+    border: none;
+    color: #ffffff;
+    background-color: #1a4ef8;
+    transition: background-color 0.2s;
+}
+
+#add-new-person form input[type="submit"]:focus {
+    outline: none  !important
+}
+
+#add-new-person form input[type="submit"]:hover {
+    background-color: #0b38cc;
+}
+
+#add-new-person form #cancel {
+    display:inline-block;
+    border-radius: 0.3em;
+    border: none;
+    background-color: #ee6565;
+    color: #ffffff;
+    font-weight: 900;
+    transition: background-color 0.2s;
+}
+
+#add-new-person form #cancel:hover {
+    background-color: #f04141;
+}
+
+/*   KONTAKTI   */
+#contacts-container {
+    background-color: #dbdee7;
+    min-height: 10vh;
+    width:70vw;
+    border-radius: 0.7em;
+}
+
+
+/*   MOBILE   */
+@media only screen and (max-width: 600px) {
+    nav {
+        padding: 1em;
+        width: calc(100vw - 2em);
+    }
+
+    nav div {
+        gap: 1.5em;
+    }
+
+    #add-new-person {
+        width: calc(100vw - 4em);
+        height:calc(100vh - 4em);
+        padding: 2em;
+    }
+
+    #add-new-person form label {
+        font-size: 1.2em;
+    }
+
+    #add-new-person form input {
+        font-size: 1.2em;
+        padding: 0.4em;
+    }
+
+    #add-new-person form input[type="submit"] {
+        padding: 0.5em 2em;
+    }
+
+    #add-new-person form #cancel {
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+    }
+
+    /* MOBILE SEARCH*/
+    #search_container {
+        width: calc(100vw - 2em);
+        padding: 1em;
+    }
+
+    #search_container .separator {
+        gap: 0.7em;
+    }
+
+    #search_container label {
+        font-size: 1.2em;
+    }
+
+    #search_container input[type="text"] {
+        font-size: 1em;
+        padding: 0.5em;
+        border-radius: 0.3em;
+    }
+
+    #search_container input[type="submit"] {
+        padding: 0.5em 1em;
+        font-size: 1em;
+        border-radius: 0.3em;
+    }
+
+    #addPersonBtn {
+        width:1.2em;
+        line-height: 1.2em;
+        font-size: 2em;
+    }
+ 
+    /* MOBILE KONTAKTI*/
+    #contacts-container {
+        width:90vw;
+        border-radius: 0.5em;
+    }
+
+}
+
+/*   TABLET   */
+@media only screen and (min-width: 600px) { 
+    nav {
+        padding: 1em;
+        width:calc(90vw - 2em);
+    }
+
+    nav div {
+        gap: 2em;
+    }
+
+    #add-new-person {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(80vw - 4em);
+        min-height:calc(70vh - 4em);
+        border-radius: 0.7em;
+        padding: 2em;
+    }
+
+    #shade{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+        background-color: #0e0f0f;
+        opacity: 0.2;
+    }
+
+    #add-new-person form label {
+        font-size: 1.2em;
+    }
+
+    #add-new-person form input {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+        border-radius: 0.3em;
+        width:90%;
+        padding: 0.4em;
+    }
+
+    #add-new-person form input[type="submit"] {
+        padding: 0.5em 2em;
+    }
+
+    #add-new-person form #cancel {
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+    }
+
+    /* TABLET SEARCH*/
+    #search_container {
+        width: calc(90vw - 2em);
+        padding: 1em;
+    }
+
+    #search_container .separator {
+        gap: 0.7em;
+    }
+
+    #search_container label {
+        font-size: 2em;
+        font-weight: 700;
+    }
+
+    #search_container input[type="text"] {
+        font-size: 1.5em;
+        padding: 0.5em;
+        border-radius: 0.3em;
+        width: 55vw;
+    }
+
+    #search_container input[type="submit"] {
+        padding: 0.5em 1em;
+        font-size: 1.5em;
+        border-radius: 0.3em;
+    }
+
+    #addPersonBtn {
+        width: 1.7em;
+        line-height: 1.7em;
+        font-size: 2em;
+    }
+
+    /* TABLET KONTAKTI*/
+    #contacts-container {
+        width:85vw;
+        border-radius: 0.7em;
+    }
+}
+
+/*   DESKTOP   */
+@media only screen and (min-width: 768px){
+    nav {
+        padding: 1em;
+        width:calc(70vw - 2em);
+    }
+
+    nav div {
+        gap: 4em;
+    }
+
+    #add-new-person {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(40vw - 4em);
+        min-height:calc(80vh - 4em);
+        height: calc(80vh - 4em);
+        border-radius: 0.7em;
+        padding: 2em;
+    }
+
+    #shade{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: #0e0f0f;
+        opacity: 0.2;
+    }
+
+    #add-new-person form label {
+        font-size: 1.2em;
+    }
+
+    #add-new-person form input {
+        font-size: 1em;
+        margin-bottom: 1em;
+        border-radius: 0.3em;
+        width:90%;
+        padding: 0.6em;
+    }
+
+    #add-new-person form input[type="submit"] {
+        font-size: 1.2em;
+        padding: 0.5em 2em;
+    }
+
+    #add-new-person form #cancel {
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+    }
+
+    /* DESKTOP SEARCH*/
+    #search_container {
+        width: calc(70vw - 2em);
+        padding: 1em;
+    }
+
+    #search_container .separator {
+        gap: 0.7em;
+    }
+
+    #search_container label {
+        font-size: 2em;
+        font-weight: 700;
+    }
+
+    #search_container input[type="text"] {
+        font-size: 1.5em;
+        padding: 0.5em;
+        border-radius: 0.3em;
+        width: 55vw;
+    }
+
+    #search_container input[type="submit"] {
+        padding: 0.5em 1em;
+        font-size: 1.5em;
+        border-radius: 0.3em;
+    }
+
+    #addPersonBtn {
+        width: 1.7em;
+        line-height: 1.7em;
+        font-size: 2em;
+    }
+
+    /* DESKTOP KONTAKTI*/
+    #contacts-container {
+        padding:1em;
+        width:calc(70vw - 4em);
+        border-radius: 0.7em;
+    }
+}
