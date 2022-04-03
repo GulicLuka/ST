@@ -358,7 +358,7 @@ function saveChanges() {
         if(priimekInput.value.trim() != "") {
             arrPeople[selectedID].priimek = priimekInput.value.trim();
         }
-        if(telInput.value.trim() != "" && /^(?=.*\d)[\d ]+$/.test(telInput.value.trim()) && /^[0-9]{3}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{3}$/.test(telst.trim())){
+        if(telInput.value.trim() != "" && /^(?=.*\d)[\d ]+$/.test(telInput.value.trim()) && /^[0-9]{3}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{3}$/.test(telInput.value.trim())){
             arrPeople[selectedID].telst = telInput.value;
         }
         if(mailInput.value.trim() != "" && mailInput.value.includes("@")){
