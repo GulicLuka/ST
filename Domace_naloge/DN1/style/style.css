@@ -15,6 +15,8 @@ body{
     flex-direction: column;
     align-items:  center;
     z-index: 0;
+    height: 100%;
+    width: 100%;
 }
 
 /* NAVIGATION */
@@ -22,7 +24,6 @@ nav {
     display: flex;
     background-color: #f2f5ff;
     position: sticky;
-    font-style: bold;
     font-weight: 700;
     flex-direction: row;
     justify-content: space-between;
@@ -65,6 +66,10 @@ a:hover{
 #vizitka:hover {
     color: #f2f5ff;
     background-color: #1a4ef8; /*1a4ef8*/
+}
+
+.virContent{
+    margin-top: 20px;
 }
 
 /* SEARCH */
@@ -124,16 +129,23 @@ a:hover{
     background-color: #f2f5ff;
 }
 
-#add-new-person form h1 {
-    padding-bottom: 1.5em;
+.form {
+    display: flex;
+    flex-direction: column;
 }
 
-#add-new-person form label {
+.form h1 {
+    padding-bottom: 2em;
+}
+
+.form label {
     display: block;
     font-weight: 500;
+    font-size: 1.3em;
+    padding: 0.2em 0em;
 }
 
-#add-new-person form input {
+.form input {
     display: block;
     margin-bottom: 1em;
     border-radius: 0.3em;
@@ -143,28 +155,35 @@ a:hover{
     outline: none !important
 }
 
-#add-new-person form input:focus {
+.form input:focus {
     outline: solid 2px #adbef3  !important
 }
 
-#add-new-person form input[type="submit"] {
+.form p {
+    font-size: 1.2em;
+    color: #f04141;
+    padding-bottom: 0.5em;
+    visibility: hidden;
+}
+
+#dodaj {
     display:inline-block;
-    width: auto;
+    width: fit-content;
     border: none;
     color: #ffffff;
     background-color: #1a4ef8;
     transition: background-color 0.2s;
 }
 
-#add-new-person form input[type="submit"]:focus {
+#dodaj:focus {
     outline: none  !important
 }
 
-#add-new-person form input[type="submit"]:hover {
+#dodaj:hover {
     background-color: #0b38cc;
 }
 
-#add-new-person form #cancel {
+#cancel {
     display:inline-block;
     border-radius: 0.3em;
     border: none;
@@ -172,9 +191,10 @@ a:hover{
     color: #ffffff;
     font-weight: 900;
     transition: background-color 0.2s;
+    width: fit-content;
 }
 
-#add-new-person form #cancel:hover {
+#cancel:hover {
     background-color: #f04141;
 }
 
@@ -182,10 +202,184 @@ a:hover{
 #contacts-container {
     background-color: #dbdee7;
     min-height: 10vh;
-    width:70vw;
+    justify-content: center;
+    flex-direction: column;
     border-radius: 0.7em;
 }
 
+.contact {
+    background-color: #f2f5ff;
+    border-radius: 0.3em;
+    /*padding: 1em;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.mainDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 2em);
+    background-color: #e0e5f1;
+    border-radius: 0.3em;
+    padding: 0em 1em;
+
+}
+
+.infoDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 1em;
+}
+
+.buttonsContent {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3em;
+}
+
+.contactContent span {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.contactContent input[type="text"] {
+    border: solid 1px #dbdee7;
+    border-radius: 0.3em;
+}
+
+.contactContent input[type="text"]:focus {
+    outline: solid 1px #c9ccd4;
+}
+
+.hedaerSpan {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.infoDiv div {align-items: center;}
+
+.infoDiv input[type="tel"] {
+    border: solid 1px #dbdee7;
+    border-radius: 0.3em;
+}
+
+.infoDiv input[type="mail"] {
+    border: solid 1px #dbdee7;
+    border-radius: 0.3em;
+}
+
+.saveBtn {
+    display: inline-block;
+    width: fit-content;
+    padding: 1em;
+    color: #f2f5ff;
+    background-color: #1a4ef8;
+    border: none;
+    border-radius: 0.3em;
+    transition: background-color 0.2s;
+}
+
+.saveBtn:hover {
+    background-color: #0b38cc;
+}
+
+.cancelBtn {
+    display:inline-block;
+    padding: 1em;
+    border-radius: 0.3em;
+    border: none;
+    background-color: #ee6565;
+    color: #ffffff;
+    font-weight: 900;
+    transition: background-color 0.2s;
+    width: fit-content;
+}
+
+.cancelBtn:hover {
+    background-color: #f04141;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.removeContactBtn {
+    border: none;
+    background: none;
+    color: #c5c8cf;
+}
+
+.removeContactBtn::after {
+    display: inline-block;
+    content: "\00d7";
+    transition: color 0.2s;
+}
+
+.removeContactBtn:hover {
+    color: #f04141;
+}
+
+.likeContactBtn {
+    border: none;
+    background: none;
+    color: #c5c8cf;
+    transition: color 0.2s;
+}
+
+.likeContactBtn::after {
+    content: "\2605";
+    transition: color 0.1s;
+}
+
+.likeContactBtn:hover {
+    color: #a8abb3;
+}
+
+.editContactBtn {
+    border: none;
+    background: none;
+    color: #c5c8cf;
+    transition: color 0.2s;
+}
+
+.editContactBtn::after {
+    content: "\270E";
+    transition: color 0.2s;
+}
+
+.editContactBtn:hover {
+    color: #a8abb3;
+}
+
+#sorting {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.sortBtn {
+    border: none;
+    background-color: #4e4f53;
+    color: #f2f5ff;
+    border-radius: 2em;
+    transition: background-color 0.20s;
+}
+
+.sortBtn:hover {
+    background-color: #1a4ef8;
+}
+
+.sortBtn:focus {
+    background-color: #1a4ef8;
+}
 
 /*   MOBILE   */
 @media only screen and (max-width: 600px) {
@@ -200,24 +394,31 @@ a:hover{
 
     #add-new-person {
         width: calc(100vw - 4em);
-        height:calc(100vh - 4em);
+        min-height:calc(100vh - 4em);
+        overflow-y: hidden;
         padding: 2em;
     }
 
-    #add-new-person form label {
+    .virContent{
+        padding: 1em;
+    }
+
+    .form label {
         font-size: 1.2em;
     }
 
-    #add-new-person form input {
+    .form input {
         font-size: 1.2em;
         padding: 0.4em;
     }
 
-    #add-new-person form input[type="submit"] {
+    #dodaj {
         padding: 0.5em 2em;
+        font-size: 1.2em;
+        border-radius: 0.3em;
     }
 
-    #add-new-person form #cancel {
+    #cancel {
         font-size: 1.2em;
         padding: 0.5em 1em;
     }
@@ -256,14 +457,76 @@ a:hover{
  
     /* MOBILE KONTAKTI*/
     #contacts-container {
-        width:90vw;
+        width:calc(90vw - 2em);
+        padding: 0.5em 1em;
         border-radius: 0.5em;
+        min-height: 30vh;
     }
 
+    .contact {
+        border-radius: 0.5em;
+        width:100%;
+        height: fit-content;
+        margin: 0.5em 0em 0.5em 0em;
+    }
+
+    .contactContent {
+        padding: 0.5em 0em;
+    }
+
+    .contactContent input[type="text"] {
+        padding: 0.2em;
+        width: calc(50% - 1em);
+    }
+
+    .infoDiv input[type="tel"] {
+        padding: 0.2em;
+    }
+    
+    .infoDiv input[type="mail"] {
+        padding: 0.2em;
+    }
+
+    .buttons {
+        gap: 0.5em;
+    }
+
+    .removeContactBtn {
+        margin: -1em 0em;
+    }
+    
+    .removeContactBtn:after {
+        font-size: 4em;
+    }
+
+    .likeContactBtn {
+        margin: -2em 0em;
+    }
+    
+    .likeContactBtn::after {
+        font-size: 2em;
+    }
+    
+    .editContactBtn {
+        margin: -2em 0em;
+    }
+    
+    .editContactBtn::after {
+        font-size: 2em;
+    }
+
+    #sorting {
+        padding: 1em;
+    }
+
+    .sortBtn {
+        padding: 0.5em 1em;
+        font-size: 0.8em;
+    }
 }
 
 /*   TABLET   */
-@media only screen and (min-width: 600px) { 
+@media only screen and (min-width: 600px) and (max-width: 900px) { 
     nav {
         padding: 1em;
         width:calc(90vw - 2em);
@@ -271,6 +534,10 @@ a:hover{
 
     nav div {
         gap: 2em;
+    }
+
+    .virContent{
+        padding: 0em 3em;
     }
 
     #add-new-person {
@@ -293,11 +560,11 @@ a:hover{
         opacity: 0.2;
     }
 
-    #add-new-person form label {
+    .form label {
         font-size: 1.2em;
     }
 
-    #add-new-person form input {
+    .form input {
         font-size: 1.2em;
         margin-bottom: 1em;
         border-radius: 0.3em;
@@ -305,11 +572,13 @@ a:hover{
         padding: 0.4em;
     }
 
-    #add-new-person form input[type="submit"] {
+    #dodaj {
         padding: 0.5em 2em;
+        border-radius: 0.3em;
+        font-size: 1.2em;
     }
 
-    #add-new-person form #cancel {
+    #cancel {
         font-size: 1.2em;
         padding: 0.5em 1em;
     }
@@ -351,12 +620,62 @@ a:hover{
     /* TABLET KONTAKTI*/
     #contacts-container {
         width:85vw;
-        border-radius: 0.7em;
+        padding: 0.5em 0.5em;
+    }
+    
+    .contact {
+        margin: 0.5em;
+    }
+    .contactContent input[type="text"] {
+        font-size: 1.2em;
+        padding: 0.3em;
+        width: calc(50% - 1em);
+    }
+
+    .infoDiv input[type="tel"] {
+        padding: 0.3em;
+    }
+    
+    .infoDiv input[type="mail"] {
+        padding: 0.3em;
+    }
+
+    .removeContactBtn {
+        margin: -2em 0em;
+    }
+    
+    .removeContactBtn:after {
+        font-size: 8em;
+    }
+
+    .likeContactBtn {
+        margin: -2em 0em;
+    }
+    
+    .likeContactBtn::after {
+        font-size: 3em;
+    }
+    
+    .editContactBtn {
+        margin: -2em 0em;
+    }
+    
+    .editContactBtn::after {
+        font-size: 3em;
+    }
+
+    #sorting {
+        padding: 2em;
+    }
+
+    .sortBtn {
+        padding: 0.5em 1em;
+        font-size: 1.2em;
     }
 }
 
 /*   DESKTOP   */
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 900px){
     nav {
         padding: 1em;
         width:calc(70vw - 2em);
@@ -364,6 +683,10 @@ a:hover{
 
     nav div {
         gap: 4em;
+    }
+
+    .virContent{
+        padding: 3em;
     }
 
     #add-new-person {
@@ -382,16 +705,16 @@ a:hover{
         position: absolute;
         z-index: 1;
         width: 100vw;
-        min-height: 100vh;
+        min-height: 200%;
         background-color: #0e0f0f;
         opacity: 0.2;
     }
 
-    #add-new-person form label {
+    .form label {
         font-size: 1.2em;
     }
 
-    #add-new-person form input {
+    .form input {
         font-size: 1em;
         margin-bottom: 1em;
         border-radius: 0.3em;
@@ -399,12 +722,13 @@ a:hover{
         padding: 0.6em;
     }
 
-    #add-new-person form input[type="submit"] {
+    #dodaj {
         font-size: 1.2em;
         padding: 0.5em 2em;
+        border-radius: 0.3em;
     }
 
-    #add-new-person form #cancel {
+    #cancel {
         font-size: 1.2em;
         padding: 0.5em 1em;
     }
@@ -415,8 +739,22 @@ a:hover{
         padding: 1em;
     }
 
-    #search_container .separator {
+    .separator {
         gap: 0.7em;
+    }
+
+    #sep1 {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        gap: 0.7em;
+    }
+
+    #sep2 {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #search_container label {
@@ -424,17 +762,21 @@ a:hover{
         font-weight: 700;
     }
 
-    #search_container input[type="text"] {
+    #sep1 input[type="text"] {
         font-size: 1.5em;
         padding: 0.5em;
         border-radius: 0.3em;
-        width: 55vw;
+        width: calc(80% - 1em);
+
     }
 
-    #search_container input[type="submit"] {
-        padding: 0.5em 1em;
+    #sep1 input[type="submit"] {
+        padding: 0.4em 1em;
         font-size: 1.5em;
         border-radius: 0.3em;
+        width: calc(20% - 40px);
+        min-width: calc(20% - 40px);
+
     }
 
     #addPersonBtn {
@@ -445,8 +787,63 @@ a:hover{
 
     /* DESKTOP KONTAKTI*/
     #contacts-container {
-        padding:1em;
         width:calc(70vw - 4em);
-        border-radius: 0.7em;
+        padding: 0.5em 0.5em;
+    }
+    
+    .contact {
+        /*padding: 1em;*/
+        margin: 0.5em;
+    }
+
+    .removeContactBtn {
+        margin: -2em 0em;
+    }
+    
+    .removeContactBtn:after {
+        font-size: 8em;
+    }
+
+    .likeContactBtn {
+        margin: -2em 0em;
+    }
+    
+    .likeContactBtn::after {
+        font-size: 3em;
+    }
+    
+    .editContactBtn {
+        margin: -2em 0em;
+    }
+    
+    .editContactBtn::after {
+        font-size: 3em;
+    }
+
+    #sorting {
+        padding: 2em;
+    }
+
+    .sortBtn {
+        padding: 0.5em 1em;
+        font-size: 1em;
+    }
+
+    .contactContent input[type="text"] {
+        padding: 0.3em;
+        font-size: 1.2em;
+        width: calc(50% - 1em);
+    }
+
+    .infoDiv input[type="tel"] {
+        border-radius: 0.3em;
+        padding: 0.3em;
+        font-size: 1em;
+    }
+
+    .infoDiv input[type="mail"] {
+        border-radius: 0.3em;
+        padding: 0.3em;
+        font-size: 1em;
     }
 }

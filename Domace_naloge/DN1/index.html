@@ -10,40 +10,45 @@
 <body>
     <nav>
         <div>
-            <h1>IMENIK</h1>
+            <p>IMENIK</p>
             <a href="index.html" >Domov</a>
         </div>
-        <a href="./pages/vizitka.html" id="vizitka">Vizitka</a>
+        <a href="./pages/vizitka.html" id="vizitka">Viri</a>
     </nav>
     <div id="search_container">
-        <from>
-            <label>Poiščite osebo</label>
-            <div class="separator">
-                <div>
-                    <input type="text" />
-                    <input type="submit" value="išči"/>
-                </div>
+        <label>Poiščite osebo</label>
+        <div class="separator">
+            <div id="sep1">
+                <input type="text" id="searchBar" />
+                <input type="submit" value="&#x1F50E;&#xFE0E;" id="searchButton" />
+            </div>
+            <div id="sep2">
                 <button id="addPersonBtn">+</button>
             </div>
-        </from>
+        </div>
     </div>
     <div id="shade"></div>
-    <div id="add-new-person">
-        <form>
-            <h1>Ustvari novega uporabnika</h1>
-            <label for="ime">Ime</label>
-            <input id="ime" type="text" /> <!-- important -->
-            <label for="priimek">Priimek</label>
-            <input id="priimek" type="text" />
-            <label for="vzdevek">Vzdevek</label>
-            <input id="vzdevek" type="text" />
-            <label for="telst">Telefonska številka</label>
-            <input id="telst" type="tel" /> <!-- #important usaj ena mail ali pa tel.st.#    format stevilke -->
-            <label for="mail">E-pošta</label>
-            <input id="mail" type="email" /> <!-- #important usaj ena mail ali pa tel.st.#    format maila -->
-            <input id="dodaj" type="submit" value="Dodaj" />
+    <div id="add-new-person" class="form">
+        <h1>Ustvari novega uporabnika</h1>
+        <p id="userWarning">Uporabnik že obstaja!</p>
+        <label for="ime">Ime</label>
+        <input id="ime" type="text" /> 
+        <label for="priimek">Priimek</label>
+        <input id="priimek" type="text" />
+        <label for="telst">Telefonska številka</label>
+        <input id="telst" type="tel" pattern="([0-9]{3} [0-9]{3} [0-9]{3})"/>
+        <label for="mail">E-pošta</label>
+        <input id="mail" type="email" />
+        <div class="btndiv">
+            <button id="dodaj">Dodaj</button>
             <button id="cancel">X</button>
-        </form>
+        </div>
+
+    </div>
+    <div id="sorting">
+        <button id="vsiBtn" class="sortBtn">Prikaži vse</button>
+        <button id="priljubljeniBtn" class="sortBtn">Priljubljeni</button>
+        <button id="abcBtn" class="sortBtn">Po abecedi</button>
     </div>
     <div id="contacts-container">
 
