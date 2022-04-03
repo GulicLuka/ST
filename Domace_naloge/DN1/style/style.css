@@ -39,7 +39,7 @@ nav div {
     align-items: center;
 }
 
-nav h1 {
+nav p {
     font-size: 1.5em;
 }
 
@@ -135,7 +135,7 @@ a:hover{
 }
 
 .form h1 {
-    padding-bottom: 2em;
+    padding-bottom: 0.5em;
 }
 
 .form label {
@@ -698,14 +698,16 @@ a:hover{
         height: calc(80vh - 4em);
         border-radius: 0.7em;
         padding: 2em;
+        position: absolute;
     }
 
     #shade{
         display: none;
         position: absolute;
         z-index: 1;
-        width: 100vw;
-        min-height: 200%;
+        width: 100%;
+        height: fit-content;
+        min-height: 100%;
         background-color: #0e0f0f;
         opacity: 0.2;
     }
