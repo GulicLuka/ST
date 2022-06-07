@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.naslov {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em 1em 0.1em;
+    font-size: 2.5em;
+}
+
+form {
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    width:80vw;
+    padding:2em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5em;
+    font-size: 1.2em;
+}
+
+form div {
+    width: 100%;
+}
+
+form div input[type=text] {
+    font-size: 1em;
+    padding:0.4em;
+    width:80%;
+    border:solid 1px rgb(65, 65, 65);
+    border-radius: 1em;
+    padding-left: 1em;
+}
+
+form button {
+    padding: 0.4em 1.5em;
+    border-radius: 1em;
+    border-style: none;
+    background-color: #f8a384;
+    border: solid 1px #f8a384;
+    font-size: 1em;
+}
+
+.featured-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100vw;
+    background-color: rgb(240, 240, 240);
+}
+
+.podnaslov {
+    font-size: 1.8em;
+    padding: 1.5em;
+}
+
+.container {
+    margin:0 auto;
+    padding: 1em;
+    width:80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    border-radius: 1em;
+}
+
+.recept-container {
+    display: flex;
+    flex-direction: row;
+    min-width: calc(30% -2em);
+    padding: 1em;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 0.5em;
+    align-items: center;
+    gap: 1em;
+}
+
+.recept-container a {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto
+}
+
+.recept-container .title {
+    color: black;
+    flex-direction: row;
+    gap: 2em;
+    font-size: 1.4em;
+    flex: 1 0 auto
+}
+
+.recept-container .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    gap: 2em;
+    font-size: 0.8em;
+    color: rgb(95, 94, 94);
+    flex: 1 0 auto
+}
+
+.recept-container .inner {
+    flex-direction: row;
+    flex: 1 0 auto
+}
+
+.recept-container .inner a{
+    font-size: 1em;
+    width:calc(20% -2em);
+    flex: 1 0 auto
+}
+
+.recept-container .inner  a{
+    font-size: 1em;
+    color: black;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 0.5em;
+    padding: 0.5rem;
+    flex: 1 0 auto
+}
+
+a {
+    text-decoration: none;
+}
+
+.linkCall{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width:40vw;
+    padding-bottom: 2em;
+}
+
+.linkCall a {
+    font-size: 1em;
+    color: black;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 2em;
+    padding: 1em;
+    width:5vw;
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.add {
+    background-color: #f8a384 !important;
+}

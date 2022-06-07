@@ -1,0 +1,20 @@
+.nav-container {
+    width: 100vw;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: center;
+    background-color: #f8a384;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.special {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
